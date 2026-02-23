@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Souk - Products</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+
+    {% if products %} {% for product in products %}
+    <div>
+      {% if product.image %}
+      <img src="{{ product.image.url }}" width="200" />
+      {% endif %}
+      <h2>{{ product.name }}</h2>
+      <p>Price: {{ product.price }} MAD</p>
+      <p>{{ product.description }}</p>
+      <p>Stock: {{ product.stock }}</p>
+    </div>
+    <hr />
+    {% endfor %} {% else %}
+    <p>No products yet.</p>
+    {% endif %}
+  </body>
+</html>

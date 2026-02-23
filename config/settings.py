@@ -130,5 +130,9 @@ INSTALLED_APPS = [
     'store',
 ]
 
-
+# tailwindcss
 TAILWIND_APP_NAME = 'theme'
+
+# image upload
+MEDIA_URL = '/media/' # URL path for browser
+MEDIA_ROOT = BASE_DIR / 'media' # Folder on disk
