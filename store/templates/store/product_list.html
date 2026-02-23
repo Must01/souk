@@ -5,6 +5,7 @@
   </head>
   <body>
     <h1>Products</h1>
+    <a href="/cart/">View Cart</a>
 
     {% if products %} {% for product in products %}
     <div>
@@ -15,6 +16,7 @@
       <p>Price: {{ product.price }} MAD</p>
       <p>{{ product.description }}</p>
       <p>Stock: {{ product.stock }}</p>
+      <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
     </div>
     <hr />
     {% endfor %} {% else %}
